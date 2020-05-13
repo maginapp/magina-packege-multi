@@ -71,3 +71,311 @@ $('body')
 var ss = require('./app-main.common')
 
 ss('app-common')
+
+
+;(function () {
+  async function a () {
+    for (let i of [1,2,3]) {
+      let data = await getData(i)
+      const str = (data * 21 + '')
+      const d = +str.substr(0, 1) + str.substr(str.length - 1)
+      let c = await getData2(d * 2)
+      console.log(c)
+    }
+  }
+  
+  var getData  = (i, t=1000) => {
+  
+    return new Promise(res => {
+        console.time(i)
+        setTimeout(() => {
+          console.log('getData' + i)
+              console.timeEnd(i)
+              res(i)
+        }, t)
+    })
+  }
+
+  var getData2  = (i, t=1000) => {
+  
+    return new Promise(res => {
+        console.time(i)
+        setTimeout(() => {
+          console.log('getData' + i)
+              console.timeEnd(i)
+              res(i)
+        }, t)
+    })
+  }
+
+  var getData3  = (i, bs) => {
+  
+    return new Promise((res, rej) => {
+        setTimeout(() => {
+          if (bs) rej(new Error(i))
+          else res(i)
+        }, 100)
+    })
+  }
+
+
+  async function rejectFn () {
+    try {
+      for (let i of [1, 2, 3]) {
+        var a = await getData3(i, i > 3)
+        console.log(a)
+      }
+    } catch (e) {
+      console.log(e)
+    }
+  }
+
+  rejectFn()
+
+}())
+
+
+;(function () {
+  async function a () {
+    for (let i of [1,2,3]) {
+      let data = await getData(i)
+      const str = (data * 21 + '')
+      const d = +str.substr(0, 1) + str.substr(str.length - 1)
+      let c = await getData2(d * 2)
+      console.log(c)
+    }
+  }
+  
+  var getData  = (i, t=1000) => {
+  
+    return new Promise(res => {
+        console.time(i)
+        setTimeout(() => {
+          console.log('getData' + i)
+              console.timeEnd(i)
+              res(i)
+        }, t)
+    })
+  }
+
+  var getData2  = (i, t=1000) => {
+  
+    return new Promise(res => {
+        console.time(i)
+        setTimeout(() => {
+          console.log('getData' + i)
+              console.timeEnd(i)
+              res(i)
+        }, t)
+    })
+  }
+
+  var getData3  = (i, bs) => {
+  
+    return new Promise((res, rej) => {
+        setTimeout(() => {
+          if (bs) rej(new Error(i))
+          else res(i)
+        }, 100)
+    })
+  }
+
+
+  async function rejectFn () {
+    try {
+      for (let i of [1, 2, 3]) {
+        var a = await getData3(i, i > 3)
+        console.log(a)
+      }
+    } catch (e) {
+      console.log(e)
+    }
+  }
+
+  rejectFn()
+
+}())
+
+
+;(function () {
+  async function a () {
+    for (let i of [1,2,3]) {
+      let data = await getData(i)
+      const str = (data * 21 + '')
+      const d = +str.substr(0, 1) + str.substr(str.length - 1)
+      let c = await getData2(d * 2)
+      console.log(c)
+    }
+  }
+  
+  var getData  = (i, t=1000) => {
+  
+    return new Promise(res => {
+        console.time(i)
+        setTimeout(() => {
+          console.log('getData' + i)
+              console.timeEnd(i)
+              res(i)
+        }, t)
+    })
+  }
+
+  var getData2  = (i, t=1000) => {
+  
+    return new Promise(res => {
+        console.time(i)
+        setTimeout(() => {
+          console.log('getData' + i)
+              console.timeEnd(i)
+              res(i)
+        }, t)
+    })
+  }
+
+  var getData3  = (i, bs) => {
+  
+    return new Promise((res, rej) => {
+        setTimeout(() => {
+          if (bs) rej(new Error(i))
+          else res(i)
+        }, 100)
+    })
+  }
+
+
+  async function rejectFn () {
+    try {
+      for (let i of [1, 2, 3]) {
+        var a = await getData3(i, i > 3)
+        console.log(a)
+      }
+    } catch (e) {
+      console.log(e)
+    }
+  }
+
+  rejectFn()
+
+}())
+
+;(function () {
+  async function a () {
+    for (let i of [1,2,3]) {
+      let data = await getData(i)
+      const str = (data * 21 + '')
+      const d = +str.substr(0, 1) + str.substr(str.length - 1)
+      let c = await getData2(d * 2)
+      console.log(c)
+    }
+  }
+  
+  var getData  = (i, t=1000) => {
+  
+    return new Promise(res => {
+        console.time(i)
+        setTimeout(() => {
+          console.log('getData' + i)
+              console.timeEnd(i)
+              res(i)
+        }, t)
+    })
+  }
+
+  var getData2  = (i, t=1000) => {
+  
+    return new Promise(res => {
+        console.time(i)
+        setTimeout(() => {
+          console.log('getData' + i)
+              console.timeEnd(i)
+              res(i)
+        }, t)
+    })
+  }
+
+  var getData3  = (i, bs) => {
+  
+    return new Promise((res, rej) => {
+        setTimeout(() => {
+          if (bs) rej(new Error(i))
+          else res(i)
+        }, 100)
+    })
+  }
+
+
+  async function rejectFn () {
+    try {
+      for (let i of [1, 2, 3]) {
+        var a = await getData3(i, i > 3)
+        console.log(a)
+      }
+    } catch (e) {
+      console.log(e)
+    }
+  }
+
+  rejectFn()
+
+}())
+
+;(function () {
+  async function a () {
+    for (let i of [1,2,3]) {
+      let data = await getData(i)
+      const str = (data * 21 + '')
+      const d = +str.substr(0, 1) + str.substr(str.length - 1)
+      let c = await getData2(d * 2)
+      console.log(c)
+    }
+  }
+  
+  var getData  = (i, t=1000) => {
+  
+    return new Promise(res => {
+        console.time(i)
+        setTimeout(() => {
+          console.log('getData' + i)
+              console.timeEnd(i)
+              res(i)
+        }, t)
+    })
+  }
+
+  var getData2  = (i, t=1000) => {
+  
+    return new Promise(res => {
+        console.time(i)
+        setTimeout(() => {
+          console.log('getData' + i)
+              console.timeEnd(i)
+              res(i)
+        }, t)
+    })
+  }
+
+  var getData3  = (i, bs) => {
+  
+    return new Promise((res, rej) => {
+        setTimeout(() => {
+          if (bs) rej(new Error(i))
+          else res(i)
+        }, 100)
+    })
+  }
+
+
+  async function rejectFn () {
+    try {
+      for (let i of [1, 2, 3]) {
+        var a = await getData3(i, i > 3)
+        console.log(a)
+      }
+    } catch (e) {
+      console.log(e)
+    }
+  }
+
+  rejectFn()
+
+}())

@@ -5,7 +5,7 @@
 > axois lodash vue vuex jquery qs MD5 仅用于测试功能
 
 
-### 单元测试配置
+## 单元测试配置
 
 [karma.conf.js](test/unit/karma.conf.js)]
 
@@ -19,9 +19,9 @@
 
 * [karma-coverage文档](https://www.zybuluo.com/wangxingkang/note/790416)
 
-### babel
+## babel
 
-#### 运行顺序
+## plugins/presets 运行顺序
 
 如果某些plugins/presets处理同一段代码，按以下顺序执行
 
@@ -80,3 +80,31 @@ core-js@3需要单独安装，@babel/polyfill 版本默认会安装 "corejs": 2
     ]
 }
 ```
+
+## 切换单页多页
+
+`config` > `webpack-config` > `config.js`
+
+单页
+
+``` js
+{
+    onepageEntry: {name: './app/main.js'}, // false 或 单页入口 {name: './app/main.js'}
+    onepageHtmlPluginConfig: true,
+}
+```
+
+多页
+
+``` js
+{
+    onepageEntry: false, // false 或 单页入口 {name: './app/main.js'}
+    onepageHtmlPluginConfig: false, // 是否启用同一个模板
+}
+```
+
+
+## 提交记录
+
+[2020/05/13] 添加了`uglifyjs-webpack-plugin` 压缩代码功能测试，之前使用的是`terser-webpack-plugin`; 修改打包后的代码到`dist`
+

@@ -128,7 +128,7 @@ module.exports = {
     new CopyWebpackPlugin([
       {
         from: path.resolve(__dirname, '../static'),
-        to: '../public/static',
+        to: '../dist/static',
         ignore: ['.*']
       }
     ]),

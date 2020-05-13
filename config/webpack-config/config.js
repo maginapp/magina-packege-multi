@@ -7,13 +7,13 @@ const rootPath = process.cwd()
 
 const config = {
   codeRootPath: 'app',
-  buildRootPath: 'public',
+  buildRootPath: 'dist',
   viewsRootPath: 'app/assets/views',
 }
 
 
 module.exports = {
-  onepageEntry: false, // false 或 单页入口 {name: './app/main.js'}
+  onepageEntry: {name: './app/main.js'}, // false 或 单页入口 {name: './app/main.js'}
   onepageHtmlPluginConfig: false,
   rootPath,
   hashLength: 5,

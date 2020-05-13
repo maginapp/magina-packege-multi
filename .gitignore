@@ -1,6 +1,5 @@
 node_modules/
 .vscode
 test/unit/coverage
-public/
 dist/
 app/assets/dll/

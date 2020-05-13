@@ -1,4 +1,5 @@
 const TerserPlugin = require('terser-webpack-plugin')
+// const uglify = require('uglifyjs-webpack-plugin')
 
 const prodMode = (process.env.NODE_ENV && process.env.NODE_ENV.trim()) === 'production'
 
@@ -45,7 +46,10 @@ module.exports = {
   //   name:'manifest'
   // },
   runtimeChunk: {
-    name: entrypoint => `manifest.${entrypoint.name}`
+    name: entrypoint => {
+      console.log(entrypoint)
+      return `manifest.${entrypoint.name}`
+    }
   },
   
   minimize: true,
@@ -60,5 +64,6 @@ module.exports = {
         },
       },
     })
+    // new uglify()
   ],
 }
